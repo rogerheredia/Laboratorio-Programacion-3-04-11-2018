@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<sim-project version="11.70" multi-file="no" uid="simpb4ad5fe07c3b4550868683c11168499f">
+  <meta>
+    <name>Laboratorio de Programacion</name>
+    <authors> Roger Keko</authors>
+    <description />
+  </meta>
+  <counters models="1">
+    <entity-names>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>8</value>
+      </counter>
+    </entity-names>
+    <entity-ids>
+      <counter>
+        <item-type type-id="" type="AbstractElementGroup" />
+        <value>30</value>
+      </counter>
+      <counter>
+        <item-type type-id="class" type="UmlClass" />
+        <value>9</value>
+      </counter>
+      <counter>
+        <item-type type-id="universal-connector" type="UniversalConnector" />
+        <value>2</value>
+      </counter>
+    </entity-ids>
+    <diagrams>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.Diagrams.UmlDiagrams.UmlClassDiagram</type>
+        <value>1</value>
+      </counter>
+    </diagrams>
+    <fields>
+      <counter>
+        <type>SoftwareIdeasModeler.Core.DiagramItems.Fields.AttributeField</type>
+        <value>15</value>
+      </counter>
+    </fields>
+  </counters>
+  <alias-groups />
+  <management uid="md-0f833901dd5f4c78a2408a2d19ad0864" name="" task-id-sequence="0">
+    <persons>
+      <person id="Pfe178cd09b894af88496887b5ee565a7">
+        <first-name />
+        <last-name>Roger</last-name>
+        <role />
+        <e-mail />
+        <phone-number />
+        <description />
+        <color>#00000000</color>
+      </person>
+    </persons>
+    <teams />
+    <sprints />
+    <projects />
+    <modules />
+    <tasks />
+    <to-dos />
+  </management>
+  <glossary id="glsr-02a8c8c3f06445c095eca1ebc206c033" />
+  <types default="UML">
+    <type-sets>
+      <type-set file="UmlTypes.xml" />
+    </type-sets>
+    <custom-types />
+  </types>
+  <items />
+  <models>
+    <model id="p73b3de8b90e04db9a0f48d817d8d9b2a_722917830" name="Model1" namespace="" order-index="1">
+      <meta>
+        <authors>
+          <author> </author>
+        </authors>
+        <description />
+        <creation-date>09/14/2018 17:35:58</creation-date>
+        <change-date>01/01/0001 00:00:00</change-date>
+        <revision-count>0</revision-count>
+        <version />
+      </meta>
+      <abstract-items />
+      <sub-models />
+      <diagram type="uml-class" id="pf33d6aee635044ae94bb410760825f00_389341153" name="ClassDiagram1" order-index="1" uid="" show-id="false" show-name="true" show-parent-name="false" name-style="local-auto-parents" show-stereotypes="true" show-tagged-values="false" show-template-parameters="true" show-fields="true" show-empty-compartments="true" show-special-indicators="false" show-attributes="true" show-attribute-visibility="true" show-operations="true" show-operation-parameters="true" show-operation-visibility="true" show-nullability="true" show-sequence-number="false" show-extension-points="false" show-relationship-texts="true" show-description="false" show-field-description="false" auto-routed-paths="false" view-location="0,17">
+        <style>
+          <background-color index="1" color="#FFFFFFFF" />
+          <background-color index="2" color="#FFFFFFFF" />
+          <background-type type="solid" />
+        </style>
+        <meta>
+          <authors>
+            <author> </author>
+          </authors>
+          <description />
+          <creation-date>09/14/2018 17:35:58</creation-date>
+          <change-date>09/14/2018 17:44:56</change-date>
+          <revision-count>0</revision-count>
+          <version />
+        </meta>
+        <abstract-items>
+          <item id="460b28b6dbfc40b79995de34877cb68f" cid="C001" type="class" name="Persona" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:36:06">
+            <style class="default" />
+            <attributes>
+              <attribute id="ac29ce7cf38944b62975cd85a29334601132" cid="ELEM001" name="dni" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-e10f6c90-3758-4d9a-ad39-b52b4d6e1e54" />
+                </source-codes>
+              </attribute>
+              <attribute id="afffef58f47ec4a778e1c408fd11f8264807" cid="ELEM002" name="nombre" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-c244e33c-efc2-4153-8413-037809f9a9e5" />
+                </source-codes>
+              </attribute>
+              <attribute id="ab44a2ed7e5564f4eb8c0bf4a8b8b98f9316" cid="ELEM003" name="apellido" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-597ddf28-483f-44d1-b564-c03e7484dc47" />
+                </source-codes>
+              </attribute>
+              <attribute id="a0e4c4575ac0b463e9d3dedc1b80c4987926" cid="ELEM004" name="nacimiento" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-6a9ccf8e-89a8-4def-a531-7247f6fd8bb0" />
+                </source-codes>
+              </attribute>
+              <attribute id="a6d80556da8c34146855a304d29cdc1b0671" cid="ELEM005" name="telefono" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-ab53fdbf-1279-41b1-bd16-8a42a1db9908" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="1f48b5ed6877456b81368432500f4d9b" cid="C002" type="class" name="estudios" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:36:21">
+            <style class="default" />
+          </item>
+          <item id="7efa03f543ca48beb77d7f7c51472b2d" cid="C003" type="class" name="profesional" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:36:29">
+            <style class="default" />
+            <attributes>
+              <attribute id="a931d7f4c8bb34af7af710e42ade7cbc9467" cid="ELEM012" name="matricula" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-80728380-93bf-4324-a7c8-6ed72a21b0db" />
+                </source-codes>
+              </attribute>
+              <attribute id="a8272cfc3ddf0494a9c68a25fbc5f41a6470" cid="ELEM013" name="especialidad" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-83721739-c37f-492e-ad16-8159bee3f905" />
+                </source-codes>
+              </attribute>
+              <attribute id="a205a6b4f54be41499f7282d359429081195" cid="ELEM014" name="empresa" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-b5346bf7-f569-4376-aa6a-dcefa491e155" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="a7596a999e1d4df28561694bf865fc49" cid="C004" type="class" name="paciente" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:36:38">
+            <style class="default" />
+            <attributes>
+              <attribute id="a16ce757945b843e8b371e21016f2271b922" cid="ELEM006" name="mail" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-7d26a59c-36d7-4107-a964-35633462fa50" />
+                </source-codes>
+              </attribute>
+              <attribute id="abe3be83a4a9748548a4c5bc9bc783529627" cid="ELEM007" name="obraSocial" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-6cedde38-e67b-41fb-a251-da7603e95e47" />
+                </source-codes>
+              </attribute>
+              <attribute id="acc9b1cc9442d4c308a4c0139393c76c5335" cid="ELEM008" name="entregado" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-3f9ae8e5-b688-4e2a-be31-a2b0cae1be28" />
+                </source-codes>
+              </attribute>
+              <attribute id="a9ae9a72f319b496cb6a50a05d2ba8eca367" cid="ELEM009" name="celular" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-cdc97687-ce2d-4f6b-aeab-8367f3258ead" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="c21d635bb97b4cf7abd40c200f5555d6" cid="C005" type="class" name="usuario" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:36:46">
+            <style class="default" />
+          </item>
+          <item id="b7e7fd571a164b55aa35b9e01384fd13" cid="C006" type="class" name="preparacion" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:36:56">
+            <style class="default" />
+            <attributes>
+              <attribute id="adee353ec65394495922544a07a547925842" cid="ELEM010" name="idPreparacion" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-0428509f-e492-445b-bd43-aa58ddc6cf12" />
+                </source-codes>
+              </attribute>
+              <attribute id="a15b9e6a09b894c20acea433df02ec025608" cid="ELEM011" name="descripcion" creation-date="01/01/0001 00:00:00" type="" type-id="" visibility="private">
+                <style class="default" />
+                <source-codes>
+                  <source-code language="ActionScript" uid="scs-4ce557aa-88f4-4c23-b1e7-4e7b739c1cac" />
+                </source-codes>
+              </attribute>
+            </attributes>
+            <source-codes>
+              <source-code language="ActionScript" />
+            </source-codes>
+          </item>
+          <item id="af32bc81c1b14593b49f900892d0021b" cid="C008" type="class" name="especialidad" style-class="" visibility="package" change-tracking-state="added" creator="Pfe178cd09b894af88496887b5ee565a7" creation-date="09/14/2018 17:44:56">
+            <style class="default" />
+          </item>
+        </abstract-items>
+        <layer id="99c926291d4949d69725a8a7e4cd8f2e" name="Default" visible="true" enabled="true" locked="false">
+          <item id="460b28b6dbfc40b79995de34877cb68f" iid="b3b16e6731214f36a4ad62c77a867b36" creation-date="09/14/2018 17:36:06" order-index="0" type="entity">
+            <layout ax="151" ay="39" awidth="140" aheight="160" x="151" y="39" width="140" height="160" />
+            <class />
+          </item>
+          <item id="1f48b5ed6877456b81368432500f4d9b" iid="0b0b2adacca74c69a33283cd02ada1d4" creation-date="09/14/2018 17:36:21" order-index="1" type="entity">
+            <layout ax="58" ay="455" awidth="140" aheight="160" x="58" y="455" width="140" height="160" />
+            <class />
+          </item>
+          <item id="7efa03f543ca48beb77d7f7c51472b2d" iid="a6046edc122f4a4ca634e34e348e4c57" creation-date="09/14/2018 17:36:29" order-index="2" type="entity">
+            <layout ax="34" ay="232" awidth="140" aheight="160" x="34" y="232" width="140" height="160" />
+            <class />
+          </item>
+          <item id="a7596a999e1d4df28561694bf865fc49" iid="ed137284dfba47f0abd870de03bd07ad" creation-date="09/14/2018 17:36:38" order-index="3" type="entity">
+            <layout ax="198" ay="232" awidth="140" aheight="160" x="198" y="232" width="140" height="160" />
+            <class />
+          </item>
+          <item id="c21d635bb97b4cf7abd40c200f5555d6" iid="ba75515fa5e74d45961346cae0250d34" creation-date="09/14/2018 17:36:46" order-index="4" type="entity">
+            <layout ax="362" ay="232" awidth="140" aheight="160" x="362" y="232" width="140" height="160" />
+            <class />
+          </item>
+          <item id="b7e7fd571a164b55aa35b9e01384fd13" iid="70d521fb7b83481fbdd314377668debf" creation-date="09/14/2018 17:36:56" order-index="5" type="entity">
+            <layout ax="641" ay="59" awidth="140" aheight="160" x="641" y="59" width="140" height="160" />
+            <class />
+          </item>
+          <item id="af32bc81c1b14593b49f900892d0021b" iid="c2073b90e7b048ce9876e61a1d9c25ef" creation-date="09/14/2018 17:44:56" order-index="6" type="entity">
+            <layout ax="593" ay="267" awidth="140" aheight="160" x="593" y="267" width="140" height="160" />
+            <class />
+          </item>
+        </layer>
+      </diagram>
+    </model>
+  </models>
+</sim-project>
