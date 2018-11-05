@@ -576,7 +576,44 @@ div.nav ul li:hover{
 
 
 
+/* ACA COMIENZA PARA EL MENU DE REDES SOCIALES */
 
+
+body{
+    background: #eee;
+}
+span{
+    font-size:15px;
+}
+a{
+  text-decoration:none; 
+  color: #192ACB;
+  font-size: 20px
+  
+}
+.box{
+    padding:60px 0px;
+}
+
+.box-part{
+    background:#FFF;
+    border-radius:40px;
+    padding:60px 10px;
+    margin:30px 0px;
+}
+.text{
+    margin:20px 0px;
+}
+
+.fa{
+     color:#4183D7;
+}
+
+
+
+
+
+/* ACA TERMINA EL MENU PARA REDES SOCIALES */
 
 
 

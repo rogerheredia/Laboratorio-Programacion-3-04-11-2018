@@ -16,8 +16,32 @@
 
 
     <asset:stylesheet src="application.css"/>
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
     <g:layoutHead/>
+
+<style class="cp-pen-styles">@import url("https://fonts.googleapis.com/css?family=Lora:700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+
+:root {
+  --z-distance: 8.519vw;
+  --from-left: 1;
+  --mobile-bkp: 650px;
+}
+
+body {
+ 
+  
+  font-family: Lora, serif;
+  font-size: calc(14px + .3vw);
+}
+
+  
+
+
+
+</style>
+
+
 </head>
 
 
