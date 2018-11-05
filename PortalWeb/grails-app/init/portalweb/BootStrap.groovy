@@ -18,6 +18,25 @@ class BootStrap {
                   }
                 }
 
+ 
+          
+
+          def per= new Persona (nombre: 'Exequiel', apellido: 'Rolon', dni:'39016815', direccion:'micasa', telefono:'3834545199',
+           email:'kematiasrolon@gmail.com', nombreUsuario: 'kekorolon', claveUsuario:'123', rol: rol1)   
+           if(!per.save(flush: true)) {
+            per.errors.each{
+              println it
+            }
+          }  
+
+           def per2= new Persona (nombre: 'ROGER', apellido: 'HEREDIA', dni:'39016816', direccion:'micasa', telefono:'3834545199',
+           email:'rogerheredia@gmail.com', nombreUsuario: 'rogerheredia', claveUsuario:'123', rol: rol2)   
+           if(!per2.save(flush: true)) {
+            per2.errors.each{
+              println it
+            }
+          }  
+
 
     }
     def destroy = {

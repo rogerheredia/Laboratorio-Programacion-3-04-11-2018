@@ -24,6 +24,7 @@ class Persona {
     	apellido nullable:false, maxSize:40, blank:false
     	dni nullable:false, maxSize:8,blank:false
     	email email:true, unique:true,blank:false
+    	fechaNacimiento nullable:true
 
     }
 }

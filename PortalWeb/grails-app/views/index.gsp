@@ -8,15 +8,37 @@
 
 <body >
 
+ <g:if test="${!session.usuario}" >
 
-
-
-    <div class="svg" role="presentation">
+  
+ <div class="svg" role="presentation">
         <div class="grails-logo-container text-center" style="background-color: #3145A8">
             <img src="https://www.comfandi.com.co/sites/default/files/wysiwyg/comfandi_laboratorio_banner.png"  class="grails-logo" width="1500px" height="400px" no-repeat center center fixed />
         </div>
     </div>
 
+</g:if>
+
+
+<g:else>
+
+  <g:if test="${session.usuario.rol.codigoRol == '1' }" >
+    <div class="svg" role="presentation">
+        <div class="grails-logo-container text-center" style="background-color: #3145A8">
+            <img src="http://www.admin-magazine.com/extension/adminmag/design/admin_fe/images/admin-magazine-og.png"  class="grails-logo" width="1500px" height="400px" no-repeat center center fixed />
+        </div>
+    </div>
+    </g:if>
+
+    <g:else>
+  <div class="svg" role="presentation">
+        <div class="grails-logo-container text-center" style="background-color: #3145A8">
+            <img src="https://i.imgur.com/EXW0cFw.png"  class="grails-logo" width="1500px" height="400px" no-repeat center center fixed />
+        </div>
+    </div>
+    </g:else>
+
+</g:else>
 
 
 

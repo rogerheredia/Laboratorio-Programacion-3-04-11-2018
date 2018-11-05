@@ -35,6 +35,8 @@ class ContactoController {
 
     }
 
+
+
     def login() {
      if (request.get) {
        return render(view: 'login')
@@ -46,6 +48,8 @@ class ContactoController {
        if (u) {
          if (u.claveUsuario == (params.pass)) {
             session.usuario = u
+
+            println(session.usuario.rol.codigoRol)
 
             
             render(view: "../index")

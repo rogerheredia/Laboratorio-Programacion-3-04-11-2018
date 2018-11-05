@@ -26,8 +26,14 @@
             </ul>
             </g:hasErrors>
             <g:form resource="${this.paciente}" method="POST">
+
                 <fieldset class="form"  >
+
                     <f:all bean="paciente" except="obraSocial, estudio"  />
+
+               
+                   
+                    
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />

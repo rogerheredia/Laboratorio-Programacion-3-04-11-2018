@@ -50,33 +50,36 @@
                      <a class="navbar-brand" href="/#" id="logo">PortalWeb </a>
              </div>
 
+
+                 <g:if test="${!session.usuario}" >
+
+
                  <!-- Recoge los enlaces de navegación, formularios y otro contenido para alternar -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                     <ul class="nav navbar-nav">
-                            <li class="active" ><g:link controller="contacto" action="showIndex">Inicio</g:link></li>
-                            <li ><a href="#">Quienes Somos</a></li>
-                            <li ><g:link controller="contacto" action="showNuestrosLaboratorios">Nuestros Laboratorios</g:link></li>
-                            <li ><g:link controller="contacto" action="showContacto">Contactanos</g:link></li>
-
-                          
-
-                            <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
-
+                     <ul class="navbar-nav row text-center" style="padding-top: 30px">
+                                                       <marquee>
+                            <li style="color: yellow; font-style: italic; font-size: 20px">Debe Iniciar Sesion para ver las opciones</li>                      
+                     </marquee>
+                           
+                              
+                            
 
 
                     </ul>
+                       
+                       
+                  
 
 
-
-                          <g:if test="${!session.usuario}" >
-
+                         
 
 
+                            
 
                           <ul class="nav navbar-nav navbar-right" >
                             <li><p class="navbar-text" style="color: black; font-size: 20px">  ${message}</p></li>
                             <li class="dropdown">
-
+                       
 
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b> <span class="caret"></span></a>
                                 <ul id="login-dp" class="dropdown-menu">
@@ -115,7 +118,39 @@
 
                         </g:if>
 
+        
+
                         <g:else>
+
+
+
+                         <!-- Recoge los enlaces de navegación, formularios y otro contenido para alternar -->
+                  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     <ul class="nav navbar-nav">
+                            <li class="active" ><g:link controller="contacto" action="showIndex">Inicio</g:link></li>
+                            <li ><a href="#">Quienes Somos</a></li>
+                            <li ><g:link controller="contacto" action="showNuestrosLaboratorios">Nuestros Laboratorios</g:link></li>
+                            <li ><g:link controller="contacto" action="showContacto">Contactanos</g:link></li>
+
+                          <g:if test="${session.usuario.rol.codigoRol == '1' }" >
+
+                            <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
+                               <UL>
+                                   <label style="color: red">ADMINISTRADOR</label>
+                               </UL> 
+
+                           </g:if>
+
+                           <g:else> 
+                                 <UL>
+                                   <label style="color: red">Usuario Normal</label>
+                               </UL> 
+                           </g:else>
+
+                    </ul>
+
+
+                                
                           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top: 20px; color:yellow;font-size: 20px">
                               <ul class="nav navbar-nav navbar-right" >
                               Usuario : ${  session.usuario.nombreUsuario}
@@ -124,7 +159,8 @@
                               </ul>
                             </ul>
                           </div>
-                          </g:else>
+
+                           </g:else>
 
 
                      </div><!-- /.navbar-collapse -->
