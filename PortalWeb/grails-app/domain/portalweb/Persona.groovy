@@ -9,10 +9,9 @@ class Persona {
 	String direccion
 	String telefono
 	String email
-	String nombreUsuario
-	String claveUsuario
+    
 	
-	Rol rol
+
 
 
 

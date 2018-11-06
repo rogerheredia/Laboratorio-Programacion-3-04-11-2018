@@ -47,7 +47,7 @@ body {
 
 
 
-<body style=" background-color: #6CB1DC">
+<body style=" background-image: url(https://www.basepyme.es/wp-content/uploads/2015/10/fachada_I-D-i2.jpg); background-size: 100%;background-repeat: no-repeat;">
 
 
 
@@ -111,7 +111,7 @@ body {
                                          <div class="row">
 
                                                     Inicia Sesión con tu cuenta
-                                                     <g:form class="form" method="post" controller="Contacto" action="login" accept-charset="UTF-8" id="login">
+                                                     <g:form class="form" method="post" controller="contacto" action="login" accept-charset="UTF-8" id="login">
                                                             <div class="form-group">
                                                                  <label class="sr-only" for="exampleInputEmail2">Direccion de Correo Electronico</label>
                                                                  <input type="text" class="form-control" id="email" name="email" placeholder="Direccion de Correo" required>
@@ -155,6 +155,7 @@ body {
                             <li ><a href="#">Quienes Somos</a></li>
                             <li ><g:link controller="contacto" action="showNuestrosLaboratorios">Nuestros Laboratorios</g:link></li>
                             <li ><g:link controller="contacto" action="showContacto">Contactanos</g:link></li>
+                            <li ><g:link controller="paciente" action="listaEstudioPaciente">Ver Estudios</g:link></li>
 
                           <g:if test="${session.usuario.rol.codigoRol == '1' }" >
 
@@ -177,7 +178,7 @@ body {
                                 
                           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top: 20px; color:yellow;font-size: 20px">
                               <ul class="nav navbar-nav navbar-right" >
-                              Usuario : ${  session.usuario.nombreUsuario}
+                              Usuario : ${  session.usuario.email}
                               <ul>
                                 <g:link controller="contacto" action="logout"> Cerrar Sesion  </g:link>
                               </ul>

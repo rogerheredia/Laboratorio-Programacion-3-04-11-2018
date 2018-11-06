@@ -43,13 +43,13 @@ class ContactoController {
      }
 
 
-      def u = Persona.findByEmail(params.email.trim())
+      def u = Usuario.findByEmail(params.email.trim())
 
        if (u) {
-         if (u.claveUsuario == (params.pass)) {
+         if (u.clave == (params.pass)) {
             session.usuario = u
 
-            println(session.usuario.rol.codigoRol)
+        println(session.usuario.rol.codigoRol)
 
             
             render(view: "../index")

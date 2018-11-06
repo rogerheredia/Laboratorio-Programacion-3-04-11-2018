@@ -106,4 +106,22 @@ class PacienteController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+
+
+
+    def listaEstudioPaciente (){
+            Paciente  paciente = pacienteService.quienSoy(session.usuario) 
+            if (paciente) {
+                  render view: 'estudios',model: [pacienteListaEsutdio:pacienteService.listaEstudios(paciente)]
+                          }
+
+
+
+    }
+
+
+
+
+
 }

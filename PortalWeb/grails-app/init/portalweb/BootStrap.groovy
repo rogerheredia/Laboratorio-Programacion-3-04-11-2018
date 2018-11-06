@@ -19,10 +19,10 @@ class BootStrap {
                 }
 
  
-          
+
 
           def per= new Persona (nombre: 'Exequiel', apellido: 'Rolon', dni:'39016815', direccion:'micasa', telefono:'3834545199',
-           email:'kematiasrolon@gmail.com', nombreUsuario: 'kekorolon', claveUsuario:'123', rol: rol1)   
+           email:'kematiasrolon@gmail.com')   
            if(!per.save(flush: true)) {
             per.errors.each{
               println it
@@ -30,12 +30,27 @@ class BootStrap {
           }  
 
            def per2= new Persona (nombre: 'ROGER', apellido: 'HEREDIA', dni:'39016816', direccion:'micasa', telefono:'3834545199',
-           email:'rogerheredia@gmail.com', nombreUsuario: 'rogerheredia', claveUsuario:'123', rol: rol2)   
+           email:'rogerheredia@gmail.com')   
            if(!per2.save(flush: true)) {
             per2.errors.each{
               println it
             }
           }  
+
+
+
+          def usuario1 = new Usuario(email:'kematiasrolon@gmail.com',clave:'123', rol:rol1, persona:per)
+          if(!usuario1.save(flush: true)) {
+            usuario1.errors.each{
+              println it
+            }
+          } 
+          def usuario2 = new Usuario(email:'rogerheredia@gmail.com',clave:'123', rol:rol2, persona:per2)
+          if(!usuario2.save(flush: true)) {
+            usuario2.errors.each{
+              println it
+            } 
+          } 
 
 
     }

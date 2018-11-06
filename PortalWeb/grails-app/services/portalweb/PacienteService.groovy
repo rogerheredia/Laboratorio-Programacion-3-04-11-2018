@@ -1,20 +1,20 @@
 package portalweb
 
 import grails.gorm.services.Service
+import portalweb.Estudio
 
 @Service(Paciente)
-interface PacienteService {
+abstract class PacienteService implements IPacienteService
+{
 
-    Paciente get(Serializable id)
+List<Estudio> listaEstudios(Paciente paciente){
+	return Estudio.findAllByPaciente(paciente)
+}
 
-    List<Paciente> list(Map args)
 
-    Long count()
+Paciente quienSoy(Usuario usuario){
+	return Paciente.findByUsuario(usuario)
+} 
 
-    void delete(Serializable id)
-
-    Paciente save(Paciente paciente)
-
-    List<Estudio> listaEstudio(Map args)
 
 }
