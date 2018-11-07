@@ -1,6 +1,8 @@
 package portalweb
 
 import grails.gorm.services.Service
+import portalweb.Paciente
+import portalweb.Usuario
 
 @Service(Persona)
 interface PersonaService {
@@ -14,5 +16,8 @@ interface PersonaService {
     void delete(Serializable id)
 
     Persona save(Persona persona)
+
+
+
 
 }

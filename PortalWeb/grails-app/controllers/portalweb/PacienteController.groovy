@@ -9,21 +9,71 @@ class PacienteController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+
+
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+
+
+         if (session.usuario.rol.codigoRol == '1' ){
+
+                 params.max = Math.min(max ?: 10, 100)
         respond pacienteService.list(params), model:[pacienteCount: pacienteService.count()]
+
+         }
+
+         else {
+            
+            render(view: "../index")
+
+         }
+
+
+
+         
+
+
+
+       
     }
 
     def show(Long id) {
+         if (session.usuario.rol.codigoRol == '1' ){
+
+          
         respond pacienteService.get(id)
+
+         }
+         else {
+            
+            render(view: "../index")
+
+         }
+
+
+    
+
     }
 
     def create() {
+            if (session.usuario.rol.codigoRol == '1' ){
+
+          
         respond new Paciente(params)
+
+         }
+         else {
+            
+            render(view: "../index")
+
+         }
+       
     }
 
     def save(Paciente paciente) {
-        if (paciente == null) {
+             if (session.usuario.rol.codigoRol == '1' ){
+
+          
+          if (paciente == null) {
             notFound()
             return
         }
@@ -42,6 +92,15 @@ class PacienteController {
             }
             '*' { respond paciente, [status: CREATED] }
         }
+
+         }
+         else {
+            
+            render(view: "../index")
+
+         }
+
+     
     }
 
     def edit(Long id) {
@@ -111,10 +170,17 @@ class PacienteController {
 
 
     def listaEstudioPaciente (){
-            Paciente  paciente = pacienteService.quienSoy(session.usuario) 
+            Paciente  paciente = pacienteService.quienSoy(session.usuario.dni)
             if (paciente) {
-                  render view: 'estudios',model: [pacienteListaEsutdio:pacienteService.listaEstudios(paciente)]
-                          }
+                  render view: 'estudios',model: [pacienteListaEsutdio:pacienteService.listaEstudios(session.usuario.dni)]
+                         }
+            else
+            {
+          
+            render view:'main'
+                
+            }             
+
 
 
 

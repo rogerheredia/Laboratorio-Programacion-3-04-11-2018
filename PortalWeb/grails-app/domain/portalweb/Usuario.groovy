@@ -4,6 +4,7 @@ class Usuario  {
 
 	String email
 	String clave
+	String dni
 	Rol rol
 
 

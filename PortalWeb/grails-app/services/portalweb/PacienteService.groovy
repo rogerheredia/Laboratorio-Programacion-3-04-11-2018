@@ -12,9 +12,10 @@ List<Estudio> listaEstudios(Paciente paciente){
 }
 
 
-Paciente quienSoy(Usuario usuario){
-	return Paciente.findByUsuario(usuario)
-} 
+Paciente quienSoy(String dni){
+	
+	return Paciente.findByDni(dni)
 
 
+}
 }

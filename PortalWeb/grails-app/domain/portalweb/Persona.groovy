@@ -1,6 +1,5 @@
 package portalweb
-
-class Persona {
+ class Persona {
 
 	String nombre
 	String apellido
@@ -12,14 +11,9 @@ class Persona {
     
 	
 
-
-
-
-
-
     static constraints = {
 
-    	nombre nullable:false, maxSize:40, blank:false
+    	nombre nullable:true, maxSize:40, blank:false
     	apellido nullable:false, maxSize:40, blank:false
     	dni nullable:false, maxSize:8,blank:false
     	email email:true, unique:true,blank:false
