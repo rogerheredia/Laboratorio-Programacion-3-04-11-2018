@@ -9,8 +9,7 @@ abstract class PacienteService implements IPacienteService
 {
 
 List<Estudio> listarEstudios(Paciente paci){
-    println(paci.nombre)
-		return Estudio.findAllByDni(paci.dni)
+    		return Estudio.findAllByDni(paci.dni)
 
 }
 
@@ -18,9 +17,9 @@ List<Estudio> listarEstudios(Paciente paci){
 
 
 
-Paciente quienSoy(String dni){
+Paciente quienSoy(Usuario usuario){
 
-	return Paciente.findByDni(dni)
+	return Paciente.findByUsuario(usuario)
 
 
 }

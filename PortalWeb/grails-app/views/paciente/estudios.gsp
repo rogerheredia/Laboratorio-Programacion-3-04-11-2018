@@ -18,8 +18,6 @@
         <label> Mis estudios  </label>
          <f:table collection="${pacientelistaEstudio}" />   
 
-
-
       </div>
 
     </body>
