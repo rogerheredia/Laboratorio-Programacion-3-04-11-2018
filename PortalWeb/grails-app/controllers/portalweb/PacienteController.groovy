@@ -184,9 +184,9 @@ class PacienteController {
     }
 
 
-    def listarEstudioPaciente (Long id){
-            println(id)
-            Paciente pac= Paciente.findByDniLike('1234')
+    def listarEstudioPaciente (){
+
+            Paciente pac= Paciente.findByDniLike(params.dni2)
             println(pac.dni)
             if (pac!=null) {
                   render (view:'estudios', model:[pacientelistaEstudio:pacienteService.listarEstudios(pac)])

@@ -104,4 +104,19 @@ class EstudioController {
             '*'{ render status: NOT_FOUND }
         }
     }
+
+def upload(){
+      def archivo= request.getFile('fileName')
+      // creamos el directorio en la ruta donde esta nuestra aplicacion y agragamos la carpeta
+      //cargaUsuarios ese nombre cambia para lo que ustedes necesiten
+      def webRootDir = servletContext.getRealPath("/")
+      def userDir = new File(webRootDir, "c:/otros2")
+      userDir.mkdirs()
+      // se guarda el archivo en esa carpeta
+      archivo.transferTo( new File( userDir, archivo.originalFilename))
+      return
+              }
+
+
+
 }
