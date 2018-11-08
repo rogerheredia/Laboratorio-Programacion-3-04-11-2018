@@ -9,10 +9,13 @@ abstract class PacienteService implements IPacienteService
 {
 
 List<Estudio> listarEstudios(Paciente paci){
-
-			return Estudio.findAllByPaciente(paci)
+    println(paci.nombre)
+		return Estudio.findAllByDni(paci.dni)
 
 }
+
+
+
 
 
 Paciente quienSoy(String dni){

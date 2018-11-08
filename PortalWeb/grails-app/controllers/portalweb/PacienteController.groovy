@@ -173,8 +173,9 @@ class PacienteController {
             //Paciente  paciente = pacienteService.quienSoy(session.usuario.dni)
             Paciente pac= Paciente.findByDniLike('1234')
             if (pac!=null) {
-                  render view:'estudios',model: [pacienteListaEstudio:pacienteService.listarEstudios(pac)]
-                         }
+                  //def lista = pacienteService.listarEstudios(pac)
+                  render (view:'estudios', model:[pacientelistaEstudio:pacienteService.listarEstudios(pac)])
+         }
             else
             {
 

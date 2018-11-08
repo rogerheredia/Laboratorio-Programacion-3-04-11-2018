@@ -16,7 +16,7 @@
       </div>
       <div>
         <label> Mis estudios  </label>
-          <f:table collection="${pacientelistaEstudio}" />
+         <f:table collection="${pacientelistaEstudio}" />   
 
 
 
