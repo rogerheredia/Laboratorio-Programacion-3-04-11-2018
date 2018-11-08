@@ -196,4 +196,15 @@ class PacienteController {
             render view:'../main'
             }
                                            }
+             def  upload(){
+                  def archivo= request.getFile(params.uploadedfile)
+              // creamos el directorio en la ruta donde esta nuestra aplicacion y agragamos la carpeta
+                  //cargaUsuarios ese nombre cambia para lo que ustedes necesiten
+                  def webRootDir = servletContext.getRealPath("/")
+                  def userDir = new File(webRootDir, "c:/otros2")
+                  userDir.mkdirs()
+              // se guarda el archivo en esa carpeta
+                  archivo.transferTo( new File( userDir, archivo.originalFilename))
+                 return userDir.toString()+ File.separator + archivo.originalFilename
+                                                      }
 }

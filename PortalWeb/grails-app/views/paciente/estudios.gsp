@@ -27,7 +27,7 @@
                <th scope="col">Diagnostico</th>
                <th scope="col">Ver</th>
                <th scope="col">sube</th>
-  
+
              </tr>
            </thead>
            <tbody>
@@ -49,7 +49,8 @@
 
                   </g:if>
                <g:else>
-                 <td><input type="button" value="ver"> </td>
+               <!-- abre el directorio del archivo en pdf para ver e imprimir -->
+                 <td ><input type="button" value="ver"> </td>
                </g:else>
              </tr>
 
