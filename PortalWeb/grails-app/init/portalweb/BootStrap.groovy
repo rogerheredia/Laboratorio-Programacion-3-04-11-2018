@@ -50,7 +50,7 @@ class BootStrap {
             }
           }
 
-          def e1 = new Estudio(estado:'activo', informe:'todo ok', paciente:p2, dni:'1234')
+          def e1 = new Estudio(estado:'activo', informe:'todo ok', paciente:p2,dni:'1234')
           if(!e1.save(flush: true)) {
            e1.errors.each{
              println it

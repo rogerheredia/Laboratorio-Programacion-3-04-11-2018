@@ -16,7 +16,44 @@
       </div>
       <div>
         <label> Mis estudios  </label>
-         <f:table collection="${pacientelistaEstudio}" />   
+         <!--<f:table collection="${pacientelistaEstudio}" />   -->
+
+         <table class="table table-hover">
+           <thead>
+             <tr>
+               <th scope="col">#</th>
+               <th scope="col">Fecha</th>
+               <th scope="col">Estado</th>
+               <th scope="col">Diagnostico</th>
+               <th scope="col">Ver</th>
+             </tr>
+           </thead>
+           <tbody>
+
+             <g:each in="${pacientelistaEstudio}" var="a">
+
+             <tr>
+               <th scope="row">${a}</th>
+               <td>${pacientelistaEstudio.fecha}</td>
+               <td>${pacientelistaEstudio.estado}</td>
+               <td>${pacientelistaEstudio.diagnostico}</td>
+               <g:hiddenField name="idEstudio" value="${a}" />
+               <g:if test="${session.usuario.rol.codigoRol == '1' }" >
+
+
+                 <td><input type="button" value="agregar"> </td>
+                  </g:if>
+               <g:else>
+                 <td><input type="button" value="ver"> </td>
+               </g:else>
+             </tr>
+
+           </g:each>
+
+           </tbody>
+         </table>
+
+
 
       </div>
 
