@@ -3,17 +3,20 @@ package portalweb
 import grails.gorm.services.Service
 import portalweb.Estudio
 
+
 @Service(Paciente)
 abstract class PacienteService implements IPacienteService
 {
 
-List<Estudio> listaEstudios(Paciente paciente){
-	return Estudio.findAllByPaciente(paciente)
+List<Estudio> listarEstudios(Paciente paci){
+
+			return Estudio.findAllByPaciente(paci)
+
 }
 
 
 Paciente quienSoy(String dni){
-	
+
 	return Paciente.findByDni(dni)
 
 

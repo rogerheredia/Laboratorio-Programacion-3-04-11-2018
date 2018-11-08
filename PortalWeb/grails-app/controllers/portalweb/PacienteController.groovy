@@ -22,57 +22,57 @@ class PacienteController {
          }
 
          else {
-            
+
             render(view: "../index")
 
          }
 
 
 
-         
 
 
 
-       
+
+
     }
 
     def show(Long id) {
          if (session.usuario.rol.codigoRol == '1' ){
 
-          
+
         respond pacienteService.get(id)
 
          }
          else {
-            
+
             render(view: "../index")
 
          }
 
 
-    
+
 
     }
 
     def create() {
             if (session.usuario.rol.codigoRol == '1' ){
 
-          
+
         respond new Paciente(params)
 
          }
          else {
-            
+
             render(view: "../index")
 
          }
-       
+
     }
 
     def save(Paciente paciente) {
              if (session.usuario.rol.codigoRol == '1' ){
 
-          
+
           if (paciente == null) {
             notFound()
             return
@@ -95,12 +95,12 @@ class PacienteController {
 
          }
          else {
-            
+
             render(view: "../index")
 
          }
 
-     
+
     }
 
     def edit(Long id) {
@@ -170,16 +170,17 @@ class PacienteController {
 
 
     def listaEstudioPaciente (){
-            Paciente  paciente = pacienteService.quienSoy(session.usuario.dni)
-            if (paciente) {
-                  render view: 'estudios',model: [pacienteListaEsutdio:pacienteService.listaEstudios(session.usuario.dni)]
+            //Paciente  paciente = pacienteService.quienSoy(session.usuario.dni)
+            Paciente pac= Paciente.findByDniLike('1234')
+            if (pac!=null) {
+                  render view:'estudios',model: [pacienteListaEstudio:pacienteService.listarEstudios(pac)]
                          }
             else
             {
-          
+
             render view:'main'
-                
-            }             
+
+            }
 
 
 
