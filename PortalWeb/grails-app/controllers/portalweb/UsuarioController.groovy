@@ -2,7 +2,7 @@ package portalweb
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
-import portalweb.paciente
+import portalweb.Paciente
 
 class UsuarioController {
 
