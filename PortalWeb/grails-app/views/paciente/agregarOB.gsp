@@ -16,7 +16,7 @@
         </div>
         <div id="edit-paciente" class="content scaffold-edit" role="main">
             <!--    <h1><g:message code="default.edit.label" args="[entityName]" /></h1> -->
-            <h1> Generar usuario del Paciente </h1>
+            <h1> Generar usuario del Paciente  ${this.paciente.nombre}</h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
@@ -27,25 +27,40 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.paciente}" method="PUT">
+        <!--    <g:form resource="${this.paciente}" method="PUT">
                 <g:hiddenField name="version" value="${this.paciente?.version}" />
                 <fieldset class="form">
                     <f:display bean="paciente"  except="obraSocial,estudio,email,fechaNacimiento,nombreUsuario,claveUsuario,telefono,direccion,usuario"/>
-                    <g:form >
+        -->
+                    <g:form url="[action:'save',controller:'usuario']" method="post" resource="${this.paciente}">
+                    <br>
                     <Label> nombre Usuario: </label>
-                    <input type="email" name="nombreUsuario">
+                    <input type="email" name="email" >
+                    <br>
                     <Label> Clave: </label>
-                    <input type="password" name="claveUsuario" >
-                    <g:link controller="usuario" action="create"></g:link>
+                    <input type="password" name="clave" >
+                    <br>
+                    <label for="sel1">Rol:</label>
+                    <select class="form-control" id="sel1" mane="rol">
+                      <g:each var="roles" in="${listaRol}">
+                      <option value="${roles.codigoRol}">${roles.nombreRol}</option>
+                    </g:each>
+                    </select>
+                    <br>
+                  <!--  <g:link controller="usuario" action="save"> Aceptar</g:link>  -->
+                    <input class="save"  type="submit" value="Aceptar" />
                   </g:form>
-                </fieldset>
+        <!--        </fieldset>
                 <fieldset class="buttons">
+                    1 marca
+                   <!--<input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
 
-                   <!--<input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />   -->
                    <input class="save" type="submit" value="Aceptar" />
-                  <!-- hacer una tabla con las obras sociales -->
+
+                  <!-- hacer una tabla con las obras sociales
                 </fieldset>
             </g:form>
+        -->
         </div>
         <!-- Para hacer una tabla de todas las obras sociales que no tenga el pacinte -->
         <div>

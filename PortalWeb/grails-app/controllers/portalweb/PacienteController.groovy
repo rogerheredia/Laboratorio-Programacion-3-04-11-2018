@@ -108,7 +108,8 @@ class PacienteController {
     }
 
     def agregarOB(Long id){
-        respond pacienteService.get(id)
+        def listaRol = Rol.list()
+        respond pacienteService.get(id), model:[listaRol:listaRol,usuario:new Usuario(params)]
     }
 
     def estudios(){
