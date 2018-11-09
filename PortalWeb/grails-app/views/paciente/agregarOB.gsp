@@ -34,20 +34,21 @@
         -->
                     <g:form url="[action:'save',controller:'usuario']" method="post" resource="${this.paciente}">
                     <br>
-                    <Label> nombre Usuario: </label>
+                    <Label>Usuario: </label>
                     <input type="email" name="email" >
                     <br>
                     <Label> Clave: </label>
                     <input type="password" name="clave" >
                     <br>
                     <label for="sel1">Rol:</label>
-                    <select class="form-control" id="sel1" mane="rol">
+                    <select class="form-control" id="sel1" name="rol">
                       <g:each var="roles" in="${listaRol}">
                       <option value="${roles.codigoRol}">${roles.nombreRol}</option>
                     </g:each>
                     </select>
                     <br>
                   <!--  <g:link controller="usuario" action="save"> Aceptar</g:link>  -->
+                  <input type="text" name="dni" value="${this.paciente.dni}"/>
                     <input class="save"  type="submit" value="Aceptar" />
                   </g:form>
         <!--        </fieldset>

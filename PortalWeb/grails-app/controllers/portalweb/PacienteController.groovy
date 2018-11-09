@@ -28,6 +28,8 @@ class PacienteController {
 
          }
 
+<<<<<<< HEAD
+=======
           
         }
 
@@ -35,6 +37,7 @@ class PacienteController {
  
 
 
+>>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
     }
 
     def show(Long id) {
@@ -55,6 +58,8 @@ class PacienteController {
 
          }
 
+<<<<<<< HEAD
+=======
           
         }
 
@@ -63,6 +68,7 @@ class PacienteController {
 
 
 
+>>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
     }
 
     def create() {

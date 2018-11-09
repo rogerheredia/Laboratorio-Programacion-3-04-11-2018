@@ -2,7 +2,11 @@ package portalweb
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
+<<<<<<< HEAD
+import portalweb.PacienteService
+=======
 import portalweb.Paciente
+>>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
 
 class UsuarioController {
 
@@ -85,6 +89,10 @@ class UsuarioController {
      
     }
 
+<<<<<<< HEAD
+    def save(Usuario usuario) {
+        if (usuario == null) {
+=======
     def save(Usuario usuario,Paciente pac) {
                 if (session.usuario) {
 
@@ -92,14 +100,17 @@ class UsuarioController {
 
                
          if (usuario == null) {
+>>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
             notFound()
             return
         }
 
         try {
+            Paciente pac =  Paciente.findByDniLike(params.dni)
+            println(pac.dni)
             usuarioService.save(usuario)
             pac.usuario = usuario
-            pacienteService.save(pac)
+            pac.save(flush:true)
         } catch (ValidationException e) {
             respond usuario.errors, view:'create'
             return
