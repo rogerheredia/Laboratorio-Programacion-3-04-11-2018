@@ -26,6 +26,7 @@ class BootStrap {
                       }
 
 
+
                 def u1 = new Usuario(email:'kematiasrolon@gmail.com',clave:'123', rol:rol3)
                 if(!u1.save(flush: true)) {
                   u1.errors.each{
@@ -43,6 +44,18 @@ class BootStrap {
                 def u3 = new Usuario(email:'administrativo@gmail.com',clave:'123', rol:rol1)
                 if(!u3.save(flush: true)) {
                   u3.errors.each{
+
+                  }
+                }
+                  def u4 = new Usuario(email:'us4@gmail.com',clave:'123', rol:rol2)
+                if(!u4.save(flush: true)) {
+                  u4.errors.each{
+
+                  }
+                }
+                  def u5 = new Usuario(email:'us5@gmail.com',clave:'123', rol:rol2)
+                if(!u5.save(flush: true)) {
+                  u5.errors.each{
 
                   }
                 }
@@ -71,6 +84,27 @@ class BootStrap {
              println it
            }
          }
+         def p4= new Paciente (nombre: 'Roberto', apellido: 'Roldan', dni:'12341234', direccion:'micasasda', telefono:'3834545199',
+          email:'us4@gmail.com',usuario:u4)
+          if(!p4.save(flush: true)) {
+           p4.errors.each{
+             println it
+           }
+         }
+         def p5= new Paciente (nombre: 'Agustin', apellido: 'Paez', dni:'12344', direccion:'micasa', telefono:'3834545199',
+          email:'us5@gmail.com',usuario:u5)
+          if(!p5.save(flush: true)) {
+           p5.errors.each{
+             println it
+           }
+         }
+         def p6= new Paciente (nombre: 'Matias', apellido: 'Lampalagua', dni:'12344', direccion:'micasa', telefono:'3834545199',
+          email:'lampa@gmail.com',usuario:u4)
+          if(!p6.save(flush: true)) {
+           p6.errors.each{
+             println it
+           }
+         }
 
 
           def e1 = new Estudio(estado:'activo', informe:'todo ok', paciente:p2,dni:'1234')
@@ -79,6 +113,10 @@ class BootStrap {
              println it
            }
          }
+
+
+         
+
 
 
     }
