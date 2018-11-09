@@ -27,13 +27,6 @@ class PacienteController {
 
          }
 
-
-
-
-
-
-
-
     }
 
     def show(Long id) {
@@ -48,9 +41,6 @@ class PacienteController {
             render(view: "../index")
 
          }
-
-
-
 
     }
 

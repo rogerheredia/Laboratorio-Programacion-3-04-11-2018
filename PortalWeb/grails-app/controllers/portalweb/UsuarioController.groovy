@@ -2,7 +2,7 @@ package portalweb
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
-import portalweb.paciente
+import portalweb.PacienteService
 
 class UsuarioController {
 
@@ -23,16 +23,18 @@ class UsuarioController {
         respond new Usuario(params)
     }
 
-    def save(Usuario usuario,Paciente pac) {
+    def save(Usuario usuario) {
         if (usuario == null) {
             notFound()
             return
         }
 
         try {
+            Paciente pac =  Paciente.findByDniLike(params.dni)
+            println(pac.dni)
             usuarioService.save(usuario)
             pac.usuario = usuario
-            pacienteService.save(pac)
+            pac.save(flush:true)
         } catch (ValidationException e) {
             respond usuario.errors, view:'create'
             return
