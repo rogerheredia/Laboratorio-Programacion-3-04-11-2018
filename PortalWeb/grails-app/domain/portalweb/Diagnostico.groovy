@@ -12,4 +12,8 @@ class Diagnostico {
 
     static constraints = {
     }
+		String toString(){
+			 return nombreDiagnostico
+		}
+
 }

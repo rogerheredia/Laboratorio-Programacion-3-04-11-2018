@@ -4,7 +4,7 @@ class BootStrap {
 
     def init = { servletContext ->
 
-    def rol1= new Rol(nombreRol: 'Administrador', codigoRol: '1')
+    def rol1= new Rol(nombreRol: 'Administrativo', codigoRol: '1')
           if(!rol1.save(flush: true)) {
             rol1.errors.each{
               println it
@@ -18,6 +18,13 @@ class BootStrap {
                   }
                 }
 
+                def rol3= new Rol(nombreRol: 'Administrador', codigoRol: '3')
+                      if(!rol3.save(flush: true)) {
+                        rol3.errors.each{
+                          println it
+                        }
+                      }
+
 
                 def u1 = new Usuario(email:'kematiasrolon@gmail.com',clave:'123', rol:rol1)
                 if(!u1.save(flush: true)) {
@@ -29,6 +36,13 @@ class BootStrap {
                 def u2 = new Usuario(email:'rogerheredia@gmail.com',clave:'123', rol:rol2)
                 if(!u2.save(flush: true)) {
                   u2.errors.each{
+
+                  }
+                }
+
+                def u3 = new Usuario(email:'administrativo@gmail.com',clave:'123', rol:rol3)
+                if(!u3.save(flush: true)) {
+                  u3.errors.each{
 
                   }
                 }
@@ -49,6 +63,15 @@ class BootStrap {
               println it
             }
           }
+
+          def p3= new Paciente (nombre: 'Administrativo', apellido: 'LABORATORIO', dni:'12344', direccion:'micasa', telefono:'3834545199',
+          email:'administrativo@gmail.com',usuario:u3)
+          if(!p3.save(flush: true)) {
+           p3.errors.each{
+             println it
+           }
+         }
+
 
           def e1 = new Estudio(estado:'activo', informe:'todo ok', paciente:p2,dni:'1234')
           if(!e1.save(flush: true)) {

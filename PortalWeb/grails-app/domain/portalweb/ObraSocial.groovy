@@ -8,7 +8,7 @@ class ObraSocial {
 		String cuitObraSocial
 
 
-	static belongTo=[paciente:Paciente]
+	//static belongTo=[paciente:Paciente]
 
 
     static constraints = {
@@ -19,4 +19,8 @@ class ObraSocial {
 
 
     }
+
+		String toString(){
+			 return nombreObraSocial
+		}
 }

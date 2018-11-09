@@ -4,11 +4,15 @@ class Paciente extends Persona{
 
 
    Usuario usuario
-
-	static hasMany=[obraSocial: ObraSocial, estudio:Estudio]
+   ObraSocial obraSocial
+	static hasMany=[estudio:Estudio]
 
 
     static constraints = {
+
+
+    obraSocial nullable:true  
+    usuario    nullable:true
 
 
     }

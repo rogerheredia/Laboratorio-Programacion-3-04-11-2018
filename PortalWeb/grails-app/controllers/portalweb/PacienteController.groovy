@@ -187,16 +187,16 @@ class PacienteController {
     def listarEstudioPaciente (){
 
             Paciente pac= Paciente.findByDniLike(params.dni2)
-            println(pac.dni)
+          //  println(pac.dni)
             if (pac!=null) {
                   render (view:'estudios', model:[pacientelistaEstudio:pacienteService.listarEstudios(pac)])
                           }
             else
             {
-            render view:'../main'
+            render view:'main'
             }
                                            }
-             def  upload(){
+     def  upload(){
                   def archivo= request.getFile(params.uploadedfile)
               // creamos el directorio en la ruta donde esta nuestra aplicacion y agragamos la carpeta
                   //cargaUsuarios ese nombre cambia para lo que ustedes necesiten
@@ -206,5 +206,5 @@ class PacienteController {
               // se guarda el archivo en esa carpeta
                   archivo.transferTo( new File( userDir, archivo.originalFilename))
                  return userDir.toString()+ File.separator + archivo.originalFilename
-                                                      }
+                  }
 }

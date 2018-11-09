@@ -6,4 +6,8 @@ class Rol {
 
     static constraints = {
     }
+
+    String toString(){
+      return nombreRol
+    }
 }

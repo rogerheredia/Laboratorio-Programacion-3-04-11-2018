@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+
     <title>
         <g:layoutTitle default="PortalWeb   "/>
     </title>
@@ -29,13 +30,13 @@
 }
 
 body {
- 
-  
+
+
   font-family: Lora, serif;
   font-size: calc(14px + .3vw);
 }
 
-  
+
 
 
 
@@ -82,28 +83,28 @@ body {
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                      <ul class="navbar-nav row text-center" style="padding-top: 30px">
                                                        <marquee>
-                            <li style="color: yellow; font-style: italic; font-size: 20px">Debe Iniciar Sesion para ver las opciones</li>                      
+                            <li style="color: yellow; font-style: italic; font-size: 20px">Debe Iniciar Sesion para ver las opciones</li>
                      </marquee>
-                           
-                              
-                            
+
+
+
 
 
                     </ul>
-                       
-                       
-                  
 
 
-                         
 
 
-                            
+
+
+
+
+
 
                           <ul class="nav navbar-nav navbar-right" >
                             <li><p class="navbar-text" style="color: black; font-size: 20px">  ${message}</p></li>
                             <li class="dropdown">
-                       
+
 
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Iniciar Sesión</b> <span class="caret"></span></a>
                                 <ul id="login-dp" class="dropdown-menu">
@@ -142,7 +143,7 @@ body {
 
                         </g:if>
 
-        
+
 
                         <g:else>
 
@@ -162,20 +163,37 @@ body {
                             <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
                                <UL>
                                    <label style="color: red">ADMINISTRADOR</label>
-                               </UL> 
+                               </UL>
 
                            </g:if>
 
-                           <g:else> 
+                           <g:else>
+                               <g:if test="${session.usuario.rol.codigoRol == '3' }" >
+                               <div class="dropdown">
+                                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Basicos<span class="caret"></span></button>
+                                  <ul class="dropdown-menu">
+                                    <li><g:link controller="preparacion" action="index">Preparacion</g:link></li>
+                                    <li><g:link controller="diagnostico" action="index">Diagnosticos</g:link></li>
+                                    <li><g:link controller="obraSocial" action="index">Obra Sociales</g:link></li>
+                                  </ul>
+                                </div>
+
+                              <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
+                                <UL>
+                                    <label style="color: red">ADMINISTRADOR</label>
+                                </UL>
+
+                              </g:if>
+
                                  <UL>
                                    <label style="color: red">Usuario Normal</label>
-                               </UL> 
+                               </UL>
                            </g:else>
 
                     </ul>
 
 
-                                
+
                           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top: 20px; color:yellow;font-size: 20px">
                               <ul class="nav navbar-nav navbar-right" >
                               Usuario : ${  session.usuario.email}

@@ -7,11 +7,11 @@ class Preparacion {
 		int codigoPreparacion
 
 
-
-
-	static hasOne=[practica: Practica]
-
-
     static constraints = {
     }
+
+		String toString(){
+			 return descripcionPreparacion
+		}
+
 }

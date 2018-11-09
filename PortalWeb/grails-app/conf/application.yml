@@ -131,4 +131,4 @@ grails:
       controllers:
           upload:
              maxFileSize: 1050000
-             maxRequestSize: 1050000  
+             maxRequestSize: 1050000

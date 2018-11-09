@@ -18,4 +18,9 @@ class Practica {
 
     static constraints = {
     }
+
+
+		String toString(){
+       return nombrePractica
+    }
 }

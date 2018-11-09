@@ -9,8 +9,14 @@ class Usuario  {
 
 
     static constraints = {
-
+			rol nullable:true
 
     }
+
+		String toString(){
+			return email
+
+
+		}
 
 }

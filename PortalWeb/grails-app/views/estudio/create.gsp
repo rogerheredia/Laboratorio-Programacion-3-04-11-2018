@@ -32,13 +32,14 @@
                   <g:datePicker name="fecha" precision="day"/>
                 </div>
               </div>
+              <!--
               <div class="form-group">
                 <label class="control-label col-sm-2" for="informe">Informe:</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="informe" name="informe" >
                 </div>
               </div>
-
+            -->  
 
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
