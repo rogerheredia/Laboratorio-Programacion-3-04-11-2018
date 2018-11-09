@@ -11,20 +11,87 @@ class UsuarioController {
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
     def index(Integer max) {
+
+         if (session.usuario) {
+
+          if (session.usuario.rol.codigoRol == '3'  ){
+
+               
         params.max = Math.min(max ?: 10, 100)
         respond usuarioService.list(params), model:[usuarioCount: usuarioService.count()]
+
+         }
+
+         else {
+
+            render(view: "../index")
+
+         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+ 
+
+
+
+
     }
 
     def show(Long id) {
-        respond usuarioService.get(id)
+          if (session.usuario) {
+
+          if (session.usuario.rol.codigoRol == '3'  ){
+
+               
+      respond usuarioService.get(id)
+
+         }
+
+         else {
+
+            render(view: "../index")
+
+         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+      
     }
 
     def create() {
-        respond new Usuario(params)
+                if (session.usuario) {
+
+          if (session.usuario.rol.codigoRol == '3'  ){
+
+               
+         respond new Usuario(params)
+
+         }
+
+         else {
+
+            render(view: "../index")
+
+         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+     
     }
 
     def save(Usuario usuario,Paciente pac) {
-        if (usuario == null) {
+                if (session.usuario) {
+
+          if (session.usuario.rol.codigoRol == '3' || session.usuario.rol.codigoRol == '2'  ){
+
+               
+         if (usuario == null) {
             notFound()
             return
         }
@@ -45,14 +112,48 @@ class UsuarioController {
             }
             '*' { respond usuario, [status: CREATED] }
         }
+
+         }
+
+         else {
+
+            render(view: "../index")
+
+         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+       
     }
 
     def edit(Long id) {
-        respond usuarioService.get(id)
+                     if (session.usuario) {
+
+          if (session.usuario.rol.codigoRol == '3' || session.usuario.rol.codigoRol == '2'  ){
+respond usuarioService.get(id)
+
+         }
+
+         else {
+
+            render(view: "../index")
+
+         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+        
     }
 
     def update(Usuario usuario) {
-        if (usuario == null) {
+        if (session.usuario) {
+
+          if (session.usuario.rol.codigoRol == '3' || session.usuario.rol.codigoRol == '2'  ){
+ if (usuario == null) {
             notFound()
             return
         }
@@ -71,6 +172,20 @@ class UsuarioController {
             }
             '*'{ respond usuario, [status: OK] }
         }
+
+         }
+
+         else {
+
+            render(view: "../index")
+
+         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+       
     }
 
     def delete(Long id) {

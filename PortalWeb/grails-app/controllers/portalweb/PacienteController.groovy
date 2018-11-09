@@ -353,7 +353,15 @@ class PacienteController {
             render view:'main'
             }
                                            }
+                                             else render (view: "../contacto/contacto")
+                   }
+
+
      def  upload(){
+
+          if (session.usuario) {
+
+        
                   def archivo= request.getFile(params.uploadedfile)
               // creamos el directorio en la ruta donde esta nuestra aplicacion y agragamos la carpeta
                   //cargaUsuarios ese nombre cambia para lo que ustedes necesiten
@@ -363,12 +371,17 @@ class PacienteController {
               // se guarda el archivo en esa carpeta
                   archivo.transferTo( new File( userDir, archivo.originalFilename))
                  return userDir.toString()+ File.separator + archivo.originalFilename
+                                           }
+                                             else render (view: "../contacto/contacto")
+
+
+
                   }
         
           
-        }
+        
 
-        else render (view: "../contacto/contacto")
+      
 
            
 }
