@@ -26,7 +26,7 @@ class BootStrap {
                       }
 
 
-                def u1 = new Usuario(email:'kematiasrolon@gmail.com',clave:'123', rol:rol1)
+                def u1 = new Usuario(email:'kematiasrolon@gmail.com',clave:'123', rol:rol3)
                 if(!u1.save(flush: true)) {
                   u1.errors.each{
 
@@ -40,7 +40,7 @@ class BootStrap {
                   }
                 }
 
-                def u3 = new Usuario(email:'administrativo@gmail.com',clave:'123', rol:rol3)
+                def u3 = new Usuario(email:'administrativo@gmail.com',clave:'123', rol:rol1)
                 if(!u3.save(flush: true)) {
                   u3.errors.each{
 
@@ -49,7 +49,7 @@ class BootStrap {
 
 
          def p1= new Paciente (nombre: 'Exequiel', apellido: 'Rolon', dni:'123', direccion:'micasa', telefono:'3834545199',
-           email:'kematiasrolon@gmail.com',usuario:u1)
+           email:'kematiasrolon@gmail.com',usuario:u3)
            if(!p1.save(flush: true)) {
             p1.errors.each{
               println it
@@ -65,7 +65,7 @@ class BootStrap {
           }
 
           def p3= new Paciente (nombre: 'Administrativo', apellido: 'LABORATORIO', dni:'12344', direccion:'micasa', telefono:'3834545199',
-          email:'administrativo@gmail.com',usuario:u3)
+          email:'administrativo@gmail.com',usuario:u1)
           if(!p3.save(flush: true)) {
            p3.errors.each{
              println it

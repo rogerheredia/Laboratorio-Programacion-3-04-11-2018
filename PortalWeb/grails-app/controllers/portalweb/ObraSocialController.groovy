@@ -5,25 +5,59 @@ import static org.springframework.http.HttpStatus.*
 
 class ObraSocialController {
 
+
     ObraSocialService obraSocialService
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
 
+
+
+
     def index(Integer max) {
-        params.max = Math.min(max ?: 10, 100)
+
+
+       if (session.usuario) {
+
+       params.max = Math.min(max ?: 10, 100)
         respond obraSocialService.list(params), model:[obraSocialCount: obraSocialService.count()]
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+
+      
     }
 
     def show(Long id) {
-        respond obraSocialService.get(id)
+           if (session.usuario) {
+
+       respond obraSocialService.get(id)
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+
+      
     }
 
     def create() {
-        respond new ObraSocial(params)
+            if (session.usuario) {
+
+         respond new ObraSocial(params)
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+      
     }
 
     def save(ObraSocial obraSocial) {
-        if (obraSocial == null) {
+             if (session.usuario) {
+
+       if (obraSocial == null) {
             notFound()
             return
         }
@@ -42,14 +76,30 @@ class ObraSocialController {
             }
             '*' { respond obraSocial, [status: CREATED] }
         }
+
+          
+        }
+
+        else render (view: "../contacto/contacto")
+       
     }
 
     def edit(Long id) {
-        respond obraSocialService.get(id)
+
+                     if (session.usuario) {
+                         respond obraSocialService.get(id)
+          
+        }
+
+        else render (view: "../contacto/contacto")
+
+       
     }
 
     def update(ObraSocial obraSocial) {
-        if (obraSocial == null) {
+
+          if (session.usuario) {
+                       if (obraSocial == null) {
             notFound()
             return
         }
@@ -68,10 +118,17 @@ class ObraSocialController {
             }
             '*'{ respond obraSocial, [status: OK] }
         }
+          
+        }
+
+        else render (view: "../contacto/contacto")
+
+      
     }
 
     def delete(Long id) {
-        if (id == null) {
+             if (session.usuario) {
+         if (id == null) {
             notFound()
             return
         }
@@ -85,10 +142,18 @@ class ObraSocialController {
             }
             '*'{ render status: NO_CONTENT }
         }
+          
+        }
+
+        else render (view: "../contacto/contacto")
+        
     }
 
+
     protected void notFound() {
-        request.withFormat {
+
+           if (session.usuario) {
+          request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.not.found.message', args: [message(code: 'obraSocial.label', default: 'ObraSocial'), params.id])
                 redirect action: "index", method: "GET"
@@ -96,4 +161,10 @@ class ObraSocialController {
             '*'{ render status: NOT_FOUND }
         }
     }
+          
+        
+
+        else render (view: "../contacto/contacto")
+    }
+      
 }

@@ -168,7 +168,7 @@ body {
 
                            <g:else>
                               <g:if test="${session.usuario.rol.codigoRol == '3' }" >
-                                   <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
+                                  
                 
                               <li >
                                   <g:link data-toggle="dropdown">
