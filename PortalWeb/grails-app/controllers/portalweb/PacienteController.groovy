@@ -28,20 +28,19 @@ class PacienteController {
 
          }
 
-<<<<<<< HEAD
-=======
-          
+
+
         }
 
         else render (view: "../contacto/contacto")
- 
 
 
->>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
+
+
     }
 
     def show(Long id) {
-       
+
 
 
           if (session.usuario) {
@@ -58,9 +57,8 @@ class PacienteController {
 
          }
 
-<<<<<<< HEAD
-=======
-          
+
+
         }
 
         else render (view: "../contacto/contacto")
@@ -68,7 +66,7 @@ class PacienteController {
 
 
 
->>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
+
     }
 
     def create() {
@@ -87,7 +85,7 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
@@ -95,7 +93,7 @@ class PacienteController {
 
 
 
-            
+
 
     }
 
@@ -105,7 +103,7 @@ class PacienteController {
           if (session.usuario.rol.codigoRol == '1'  ){
 
 
-                
+
           if (paciente == null) {
             notFound()
             return
@@ -133,7 +131,7 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
@@ -141,7 +139,7 @@ class PacienteController {
 
 
 
-            
+
 
 
     }
@@ -161,12 +159,12 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
 
-      
+
     }
 
     def agregarOB(Long id){
@@ -185,11 +183,11 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
-  
+
     }
 
     def estudios(){
@@ -207,11 +205,11 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
-    
+
 
     }
 
@@ -249,11 +247,11 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
-       
+
     }
 
     def delete(Long id) {
@@ -283,11 +281,11 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
-        
+
     }
 
     protected void notFound() {
@@ -311,11 +309,11 @@ class PacienteController {
 
          }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
-       
+
     }
 
 
@@ -336,12 +334,12 @@ class PacienteController {
 
             }
 
-          
+
         }
 
         else render (view: "../contacto/contacto")
 
-           
+
 
     }
 
@@ -367,7 +365,7 @@ class PacienteController {
 
           if (session.usuario) {
 
-        
+
                   def archivo= request.getFile(params.uploadedfile)
               // creamos el directorio en la ruta donde esta nuestra aplicacion y agragamos la carpeta
                   //cargaUsuarios ese nombre cambia para lo que ustedes necesiten
@@ -383,11 +381,11 @@ class PacienteController {
 
 
                   }
-        
-          
-        
 
-      
 
-           
+
+
+
+
+
 }
