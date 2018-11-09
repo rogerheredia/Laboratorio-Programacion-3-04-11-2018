@@ -146,14 +146,13 @@ body {
 
 
                         <g:else>
-
-
-
+                      <div class="row"> 
+                        <div class="container-fluid">
+                          
                          <!-- Recoge los enlaces de navegación, formularios y otro contenido para alternar -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                      <ul class="nav navbar-nav">
                             <li class="active" ><g:link controller="contacto" action="showIndex">Inicio</g:link></li>
-                            <li ><a href="#">Quienes Somos</a></li>
                             <li ><g:link controller="contacto" action="showNuestrosLaboratorios">Nuestros Laboratorios</g:link></li>
                             <li ><g:link controller="contacto" action="showContacto">Contactanos</g:link></li>
                             <li ><g:link controller="paciente" action="listaEstudioPaciente">Ver Estudios</g:link></li>
@@ -168,35 +167,47 @@ body {
                            </g:if>
 
                            <g:else>
-                               <g:if test="${session.usuario.rol.codigoRol == '3' }" >
-                               <div class="dropdown">
-                                  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Basicos<span class="caret"></span></button>
-                                  <ul class="dropdown-menu">
+                              <g:if test="${session.usuario.rol.codigoRol == '3' }" >
+                                   <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
+                
+                              <li >
+                                  <g:link data-toggle="dropdown">
+                                    <label data-toggle="dropdown" style="color: white; font-size: 20px">Basicos<span class="caret"></span></label>
+                                  <ul class="dropdown-menu" style="background-color: red">
                                     <li><g:link controller="preparacion" action="index">Preparacion</g:link></li>
                                     <li><g:link controller="diagnostico" action="index">Diagnosticos</g:link></li>
                                     <li><g:link controller="obraSocial" action="index">Obra Sociales</g:link></li>
                                   </ul>
-                                </div>
+                                   </g:link>
+                                
+                               
+                              </li>
+                             
 
-                              <li ><g:link controller="paciente" action="index">Paciente</g:link></li>
+                             
                                 <UL>
-                                    <label style="color: red">ADMINISTRADOR</label>
+                                    <label style="color: red">ADMINISTRATIVO</label>
                                 </UL>
 
                               </g:if>
-
-                                 <UL>
+                              <g:else>
+                              <UL>
                                    <label style="color: red">Usuario Normal</label>
                                </UL>
+                            </g:else>
+
+                                 
                            </g:else>
 
                     </ul>
 
 
 
-                          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top: 20px; color:yellow;font-size: 20px">
+
+                          <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top: 0px; color:black;font-size: 20px">
                               <ul class="nav navbar-nav navbar-right" >
-                              Usuario : ${  session.usuario.email}
+                              <ul>Usuario</ul>  
+                              <ul style="color: #181828"> ${  session.usuario.email}</ul>
                               <ul>
                                 <g:link controller="contacto" action="logout"> Cerrar Sesion  </g:link>
                               </ul>
@@ -204,6 +215,10 @@ body {
                           </div>
 
                            </g:else>
+                        </div>
+      
+                      </div>
+           
 
 
                      </div><!-- /.navbar-collapse -->
