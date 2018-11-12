@@ -22,6 +22,7 @@
             <f:display bean="paciente" except="usuario"/>
             <g:form resource="${this.paciente}" method="DELETE">
                 <fieldset class="buttons">
+                    <g:hiddenField name="dni" value="${this.paciente.dni}" />
                     <g:link class="edit" action="edit" resource="${this.paciente}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
                     <g:link class="edit" action="agregarOB"  resource="${this.paciente}">Generar usuario</g:link>
                     <g:link class="edit" controller='Estudio' action="create"  >Agregar Nuevo Estudio</g:link>

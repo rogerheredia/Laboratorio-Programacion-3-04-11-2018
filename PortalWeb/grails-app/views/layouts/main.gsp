@@ -146,9 +146,9 @@ body {
 
 
                         <g:else>
-                      <div class="row"> 
+                      <div class="row">
                         <div class="container-fluid">
-                          
+
                          <!-- Recoge los enlaces de navegación, formularios y otro contenido para alternar -->
                   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                      <ul class="nav navbar-nav">
@@ -168,23 +168,24 @@ body {
 
                            <g:else>
                               <g:if test="${session.usuario.rol.codigoRol == '3' }" >
-                                  
-                
+
+
                               <li >
                                   <g:link data-toggle="dropdown">
                                     <label data-toggle="dropdown" style="color: white; font-size: 20px">Basicos<span class="caret"></span></label>
-                                  <ul class="dropdown-menu" style="background-color: red">
-                                    <li><g:link controller="preparacion" action="index">Preparacion</g:link></li>
+                                  <ul class="dropdown-menu" style="background-color: red">                                    
                                     <li><g:link controller="diagnostico" action="index">Diagnosticos</g:link></li>
                                     <li><g:link controller="obraSocial" action="index">Obra Sociales</g:link></li>
+                                    <li><g:link controller="preparacion" action="index">Preparacion</g:link></li>
+                                    <li><g:link controller="practica" action="index">Practica</g:link></li>
                                   </ul>
                                    </g:link>
-                                
-                               
-                              </li>
-                             
 
-                             
+
+                              </li>
+
+
+
                                 <UL>
                                     <label style="color: red">ADMINISTRATIVO</label>
                                 </UL>
@@ -196,7 +197,7 @@ body {
                                </UL>
                             </g:else>
 
-                                 
+
                            </g:else>
 
                     </ul>
@@ -206,7 +207,7 @@ body {
 
                           <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1" style="padding-top: 0px; color:black;font-size: 20px">
                               <ul class="nav navbar-nav navbar-right" >
-                              <ul>Usuario</ul>  
+                              <ul>Usuario</ul>
                               <ul style="color: #181828"> ${  session.usuario.email}</ul>
                               <ul>
                                 <g:link controller="contacto" action="logout"> Cerrar Sesion  </g:link>
@@ -216,9 +217,9 @@ body {
 
                            </g:else>
                         </div>
-      
+
                       </div>
-           
+
 
 
                      </div><!-- /.navbar-collapse -->

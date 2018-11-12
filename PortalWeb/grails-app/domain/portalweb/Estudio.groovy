@@ -1,6 +1,5 @@
 package portalweb
 
-
 class Estudio {
     Date fecha
     String estado
@@ -13,5 +12,6 @@ class Estudio {
 
     static constraints = {
     fecha nullable:true
+    informe nullable:true
     }
 }

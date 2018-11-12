@@ -21,7 +21,7 @@ class EstudioController {
      def create() {
       def listaDiagnosticos = Diagnostico.list()
       def listaPracticas = Practica.list()
-        respond new Estudio(params), model:[listaDiagnosticos:listaDiagnosticos,listaPracticas:listaPracticas]
+      respond new Estudio(params), model:[listaDiagnosticos:listaDiagnosticos,listaPracticas:listaPracticas,dni:params.dni]
     }
 
   /*  def create(){
@@ -37,6 +37,7 @@ class EstudioController {
         }
 
         try {
+            estudio.dni = params.dni
             estudioService.save(estudio)
         } catch (ValidationException e) {
             respond estudio.errors, view:'create'

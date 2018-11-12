@@ -90,7 +90,7 @@ class UsuarioController {
     def save(Usuario usuario) {
                 if (session.usuario) {
 
-          if (session.usuario.rol.codigoRol == '3' || session.usuario.rol.codigoRol == '2'  ){
+          if (session.usuario.rol.codigoRol == '1' || session.usuario.rol.codigoRol == '2'  ){
 
 
          if (usuario == null) {
@@ -101,7 +101,6 @@ class UsuarioController {
 
         try {
             Paciente pac =  Paciente.findByDniLike(params.dni)
-            println(pac.dni)
             usuarioService.save(usuario)
             pac.usuario = usuario
             pac.save(flush:true)

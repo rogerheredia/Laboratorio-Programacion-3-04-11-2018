@@ -39,7 +39,7 @@
                   <input type="text" class="form-control" id="informe" name="informe" >
                 </div>
               </div>
-            -->  
+            -->
 
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
@@ -73,8 +73,10 @@
                </div>
                  </div>
 
+
               <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
+                  <g:field type="hidden" name="dni" value="${dni}" />
                   <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </div>
               </div>
