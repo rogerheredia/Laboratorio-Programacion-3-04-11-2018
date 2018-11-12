@@ -2,8 +2,11 @@ package portalweb
 
 import grails.validation.ValidationException
 import static org.springframework.http.HttpStatus.*
+<<<<<<< HEAD
+import portalweb.PacienteService
+=======
 import portalweb.Paciente
-
+>>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
 
 class UsuarioController {
 
@@ -17,7 +20,7 @@ class UsuarioController {
 
           if (session.usuario.rol.codigoRol == '3'  ){
 
-
+               
         params.max = Math.min(max ?: 10, 100)
         respond usuarioService.list(params), model:[usuarioCount: usuarioService.count()]
 
@@ -29,11 +32,11 @@ class UsuarioController {
 
          }
 
-
+          
         }
 
         else render (view: "../contacto/contacto")
-
+ 
 
 
 
@@ -45,7 +48,7 @@ class UsuarioController {
 
           if (session.usuario.rol.codigoRol == '3'  ){
 
-
+               
       respond usuarioService.get(id)
 
          }
@@ -56,11 +59,11 @@ class UsuarioController {
 
          }
 
-
+          
         }
 
         else render (view: "../contacto/contacto")
-
+      
     }
 
     def create() {
@@ -68,7 +71,7 @@ class UsuarioController {
 
           if (session.usuario.rol.codigoRol == '3'  ){
 
-
+               
          respond new Usuario(params)
 
          }
@@ -79,22 +82,25 @@ class UsuarioController {
 
          }
 
-
+          
         }
 
         else render (view: "../contacto/contacto")
-
+     
     }
 
-
+<<<<<<< HEAD
     def save(Usuario usuario) {
+        if (usuario == null) {
+=======
+    def save(Usuario usuario,Paciente pac) {
                 if (session.usuario) {
 
           if (session.usuario.rol.codigoRol == '1' || session.usuario.rol.codigoRol == '2'  ){
 
-
+               
          if (usuario == null) {
-
+>>>>>>> 90a706195439a067f7886bc72002fec6ddce4d62
             notFound()
             return
         }
@@ -125,18 +131,18 @@ class UsuarioController {
 
          }
 
-
+          
         }
 
         else render (view: "../contacto/contacto")
-
+       
     }
 
     def edit(Long id) {
                      if (session.usuario) {
 
           if (session.usuario.rol.codigoRol == '3' || session.usuario.rol.codigoRol == '2'  ){
-             respond usuarioService.get(id)
+respond usuarioService.get(id)
 
          }
 
@@ -146,11 +152,11 @@ class UsuarioController {
 
          }
 
-
+          
         }
 
         else render (view: "../contacto/contacto")
-
+        
     }
 
     def update(Usuario usuario) {
@@ -185,11 +191,11 @@ class UsuarioController {
 
          }
 
-
+          
         }
 
         else render (view: "../contacto/contacto")
-
+       
     }
 
     def delete(Long id) {
