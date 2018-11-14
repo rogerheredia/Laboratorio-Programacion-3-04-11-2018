@@ -1,0 +1,12 @@
+portalweb.$DiagnosticoServiceImplementation
+portalweb.$EspecialidadServiceImplementation
+portalweb.$EstudioServiceImplementation
+portalweb.$InformeServiceImplementation
+portalweb.$ObraSocialServiceImplementation
+portalweb.$PacienteServiceImplementation
+portalweb.$PersonaServiceImplementation
+portalweb.$PracticaServiceImplementation
+portalweb.$PreparacionServiceImplementation
+portalweb.$ProtocoloServiceImplementation
+portalweb.$SolicitanteServiceImplementation
+portalweb.$UsuarioServiceImplementation
